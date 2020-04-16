@@ -41,12 +41,12 @@ sys.path.append('!~\Desktop\sentimeter')  # Modify to identify path for custom m
 import Load_MasterDictionary as LM
 
 # User defined directory for files to be parsed
-TARGET_FILES = r'/Users/zeriet/Desktop/sentimenter/Natural_Language_Processing/Data/*'
+TARGET_FILES = r'Natural_Language_Processing/Data/Input/*'
 # User defined file pointer to LM dictionary
-MASTER_DICTIONARY_FILE = r'/Users/zeriet/Desktop/sentimenter/Natural_Language_Processing/Dictionaries/' + \
+MASTER_DICTIONARY_FILE = r'Natural_Language_Processing/Dictionaries/' + \
                          'LoughranMcDonald_MasterDictionary_2018.csv'
 # User defined output file
-OUTPUT_FILE = r'/Users/zeriet/Desktop/dev/Parser.csv'
+OUTPUT_FILE = r'Natural_Language_Processing/Data/Output/Parser.csv'
 # Setup output
 OUTPUT_FIELDS = ['file name,', 'file size,', 'number of words,', '% positive,', '% negative,',
                  '% uncertainty,', '% litigious,', '% modal-weak,', '% modal moderate,',
