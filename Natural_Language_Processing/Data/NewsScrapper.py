@@ -8,8 +8,11 @@ from time import sleep
 
 
 def parse(ticker):
-    url = "http://finance.yahoo.com/quote/%s?p=%s" % (ticker, ticker)
+    # url = "http://finance.yahoo.com/quote/%s?p=%s" % (ticker, ticker)
+    url = "https://stocktwits.com/symbol/PCG"
+    # url = "https://techcrunch.com/2020/04/16/apple-said-to-be-working-on-modular-high-end-noise-cancelling-over-ear-headphones/"
     response = requests.get(url, verify=False)
+    print(response.text)
     print("Parsing %s" % (url))
     sleep(4)
     parser = html.fromstring(response.text)
@@ -43,7 +46,6 @@ def parse(ticker):
 
 
 if __name__ == "__main__":
-
     ticker = 'AAPL'
     print("Fetching data for %s" % (ticker))
     scraped_data = parse(ticker)
